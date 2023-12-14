@@ -14,10 +14,11 @@ const { NotImplementedError } = require('../extensions/index.js')
  *
  */
 function createDreamTeam(members) {
+  if (!Array.isArray(members)) return false
   let res = []
   members.forEach((item) => {
     if (typeof item === 'string') {
-      res.push(item.slice(0, 1))
+      res.push(item.trim().slice(0, 1).toUpperCase())
     }
   })
   return res.sort((a, b) => a.localeCompare(b)).join('')
