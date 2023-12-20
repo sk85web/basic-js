@@ -30,7 +30,6 @@ function getSeason(date) {
     }
   })
 
-  const seasonDate = new Date(date).toString()
   const monthFromDate = date.getMonth().toString().padStart(2, 0)
   if (
     monthFromDate === '11' ||
